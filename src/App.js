@@ -1,5 +1,6 @@
 import './App.css';
 import Sidebar from './components/Sidebar';
+import DashboardView from './components/DashboardView';
 
 function App() {
   return (
@@ -7,7 +8,9 @@ function App() {
       <div className="basis-[12%] h-[100vh]">
         <Sidebar />
       </div>
-      <div className="basis-[88%] border">2</div>
+      <div className="basis-[88%] border">
+        <DashboardView />
+      </div>
     </div>
   );
 }

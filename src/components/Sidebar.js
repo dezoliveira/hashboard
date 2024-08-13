@@ -16,7 +16,7 @@ const Sidebar = () => {
           Dashboard
         </p>
       </div>
-
+    
       {/* Interface */}
       <div className="py-2 px-2 border-b-[1px] border-slate-50/30">
         <p className="text-white/40">Interface</p>

@@ -1,6 +1,7 @@
 import './App.css';
 import Sidebar from './components/Sidebar';
 import DashboardView from './components/DashboardView';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
       </div>
       <div className="basis-[88%] border">
         <DashboardView />
+        <div>
+          <Outlet></Outlet>
+        </div>
       </div>
     </div>
   );

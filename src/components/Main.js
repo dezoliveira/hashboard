@@ -2,6 +2,7 @@ import { FaRegCalendar, FaEllipsisV } from "react-icons/fa";
 import PieComponent from "./PieComponent";
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { Progress } from "antd";
 
 const data = [
   {
@@ -128,6 +129,43 @@ const Main = () => {
             <PieComponent></PieComponent>
           </div>
         </div>
+      </div>
+
+      <div className="flex mt-[22px] w-full gap-[30px]">
+        <div className="basis-[55%] border bg-white shadow-md cursor-pointer rounded-[4px]">
+          <div className="bg-slate-50 flex items-center justify-between py-15px px-[20px] border-b-[1px] border-slate-50">
+            <h2 className="text-cyan-500 text-[16px] font-bold">Projects Overview</h2>
+            <FaEllipsisV color="gray" className="cursor-pointer" />
+          </div>
+          <div className="px-[25px] space-y-[15px] py-[15px]">
+            <div>
+              <h2>Server Migrations</h2>
+              <Progress percent={30} strokeColor="blue"/>
+            </div>
+
+            <div>
+              <h2>Sales Tracking</h2>
+              <Progress percent={50} status="active" strokeColor="green"/>
+            </div>
+
+            <div>
+              <h2>Customer Datababse</h2>
+              <Progress percent={70} strokeColor="red"/>
+            </div>
+
+            <div>
+              <h2>Payout Details</h2>
+              <Progress percent={100} strokeColor="yellow"/>
+            </div>
+
+            <div>
+              <h2>Account Setup</h2>
+              <Progress percent={20} status="exception" strokeColor="purple"/>
+            </div>
+          </div>
+        </div>
+
+        <div className="basis-[45%] border"></div>
       </div>
     </div>
   )

@@ -3,6 +3,7 @@ import PieComponent from "./PieComponent";
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { Progress } from "antd";
+import err from "../assets/error.jpg"
 
 const data = [
   {
@@ -133,7 +134,7 @@ const Main = () => {
 
       <div className="flex mt-[22px] w-full gap-[30px]">
         <div className="basis-[55%] border bg-white shadow-md cursor-pointer rounded-[4px]">
-          <div className="bg-slate-50 flex items-center justify-between py-15px px-[20px] border-b-[1px] border-slate-50">
+          <div className="bg-slate-50 flex items-center justify-between py-[15px] px-[20px] border-b-[1px] border-slate-50">
             <h2 className="text-cyan-500 text-[16px] font-bold">Projects Overview</h2>
             <FaEllipsisV color="gray" className="cursor-pointer" />
           </div>
@@ -165,7 +166,18 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="basis-[45%] border"></div>
+        <div className="basis-[45%] border bg-white shadow-md cursor-pointer rounded-[4px]">
+          <div className="bg-slate-50 flex items-center justify-between py-[15px] px-[20px] border-b-[1px] border-slate-50">
+            <h2 className="text-cyan-500 text-[16px] font-bold">Resourcess</h2>
+            <FaEllipsisV color="gray" className="cursor-pointer" />
+          </div>
+          <div className="pl-[35px] flex items-center flex-col justify-center">
+            <div className="flex flex-col items-center justify-center">
+              <img src={err} alt="" width="200px"/>
+              <p>No data available</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

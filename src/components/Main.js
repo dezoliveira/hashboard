@@ -1,5 +1,5 @@
 import { FaRegCalendar, FaEllipsisV } from "react-icons/fa";
-
+import PieComponent from "./PieComponent";
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
@@ -118,8 +118,15 @@ const Main = () => {
             </LineChart>
           </div>
         </div>
-        <div className="basis-[50%]">
-            
+
+        <div className="basis-[50%] border bg-white shadow-md cursor-pointer rounded-[4px]">
+          <div className="bg-slate-50 flex items-center justify-between py-[15px] px-[20px] border-b-[1px] border-slate-50">
+            <h2>Revenue Resources</h2>
+            <FaEllipsisV color="gray" className="cursor-pointer" />
+          </div>
+          <div className="pl-[15px] flex items-center justify-center">
+            <PieComponent></PieComponent>
+          </div>
         </div>
       </div>
     </div>
